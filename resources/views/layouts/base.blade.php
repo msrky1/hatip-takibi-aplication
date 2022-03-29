@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>SVG Türkiye Haritası</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <title> WEB HATİM UYGULAMASI </title>
     <!-- SVG Türkiye Haritası -->
     <link href="{{asset('assets')}}/css/svg-turkiye-haritasi.css" rel="stylesheet" />
     <meta charset="utf-8">
@@ -13,20 +12,146 @@
   <title>Uygulama</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="images/x-icon">
+  <link rel="shortcut icon" href="{{asset('assets/site')}}/images/favicon.png" type="images/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="css2.css?family=Open+Sans:wght@400;600;700&family=Philosopher:wght@700&display=swap" rel="stylesheet">
+  
   <!-- gulp:css -->
-  <link rel="stylesheet" href="assets/css/app.min.css">
+  <link rel="stylesheet" href="{{asset('assets/site')}}/css/app.min.css">
   </head>
   <body>
    
+    <div class="preloader">
+      <div class="lds-preloader">
+        <div></div>
+        <div></div>
+        <div></div>   
+        <div></div>
+      </div> 
+    </div>
+    <header class="header-area">
+      <div class="header-top bg-light bg-image-pattern px-xl-8 py-2">
+        <div class="container">
+          <div class="header-top-wrapper">
+            <ul class="navbar-address list-inline m-0">
+              <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/location-icon.svg" alt="title"></span>İstanbul - TÜRKİYE</li>
+              <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/phone-icon.svg" alt="title"></span> Numara
+              </li>
+            </ul>
+            <ul class="navbar-social list-inline m-0">
+              <li class="list-inline-item"><a href="/"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="/"><i class="fab fa-instagram"></i></a></li>
+          
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom bg-white px-xl-8">
+        <nav class="container">
+          <div class="header-navbar navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html"><img src="{{asset('assets/site')}}/images/header-logo.png" alt="images"></a>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+              <nav class="navbar-meanmenu">
+                <ul class="navbar-nav">
+             
+                  <li class="nav-item"> <a class="nav-link" href="/">ANASAYFA</a></li>
+                  
+                  <li class="nav-item"> <a class="nav-link" href="about.html">HAKKIMIZDA</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="service.html">HATİMLERİNİZ</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('country.add')}}">HATİMLERİNİZ</a></li>
+                 
+                  
+                 
+                 
+                  <li class="nav-item"> <a class="nav-link" href="contact.html">İLETİŞİM</a></li>
+                </ul>
+              </nav>
+              <ul class="navbar-nav align-items-center ms-auto">
+                <li class="nav-item"> <a class="nav-link me-4" href="campaign.html">BAĞIŞ YAP</a></li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
                  {{$slot}}
+
+
+                 
+  <!--  ====================== Footer Area =============================  -->
+  <footer class="footer-area">
+    <div class="footer-top   bg-image-pattern  py-lg-8 py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-lg-4">
+            <div class="footer-widget my-4 me-md-4">
+              <a href="#" class="footer-brand mb-4"><img src="{{asset('assets/site')}}/images/footer-brand.png" alt="title"></a>
+              <p class="text-white m-0">Hakkımızda
+              </p>
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <div class="row">
+              <div class="col-lg-3 col-6">
+                <div class="footer-widget my-3">
+                  <h4 class="mb-3 text-white">Sayfalar</h4>
+                  <ul class="footer-list list-inline">
+                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="blog.html">Hatimleriniz</a></li>
+                    <li><a href="single-2.html">İletişim</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <div class="footer-widget my-3">
+                  <h4 class="mb-3 text-white">Useful Link</h4>
+                  <ul class="footer-list list-inline">
+                    <li><a href="service-2.html">Service</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="team.html">Our Staff</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <div class="footer-widget my-3">
+                  <h4 class="mb-3 text-white">Information</h4>
+                  <ul class="footer-list list-inline">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="campaign.html">Donation</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <div class="footer-widget my-3">
+                  <h4 class="mb-3 text-white">Get In Touch</h4>
+                  <ul class="footer-list list-inline">
+                    <li><a href="single-course.html">Courses</a></li>
+                    <li><a href="events.html">Event</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                  <ul class="footer-social m-0 mt-4 list-inline" data-aos="slide-up">
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom py-4 bg-secondary">
+      <div class="container">
+       <!-- <p class="text-center m-0 text-white">&copy;
+          <span id="spanYear"></span> Mahmut Sarıkaya <i class="far fa-heart text-success"></i> by <a class="text-primary" href="index-3.htm">themeix</a>.
+        </p> -->
+      </div>
+    </div>
+  </footer>
     <!-- SVG Türkiye Haritası -->
     <script src="{{asset('assets')}}/js/svg-turkiye-haritasi.js"></script>
     <script>
@@ -34,9 +159,8 @@
     </script>
 
 
-<script src="assets/js/build.min.js"></script>
+<script src="{{asset('assets/site')}}/js/build.min.js"></script>
 <!-- endgulp -->
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="0fb3e5b5-1038-45e7-a153-173d144eee90";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script></div></body>
 
   </body>
 </html>

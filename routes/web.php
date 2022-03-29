@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\Admin\Country\CountryAddComponent;
+use App\Http\Livewire\Project\Detail\PartDetailComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::get('/' , HomeComponent::class);
+
+Route::get('/sehir/{sira}' , PartDetailComponent::class)->name('country.detail');
+Route::get('/add' , CountryAddComponent::class)->name('country.add');
+
+
