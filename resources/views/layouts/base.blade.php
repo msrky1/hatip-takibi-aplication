@@ -13,10 +13,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="{{asset('assets/site')}}/images/favicon.png" type="images/x-icon">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+
   
   <!-- gulp:css -->
   <link rel="stylesheet" href="{{asset('assets/site')}}/css/app.min.css">
+  @livewireStyles
   </head>
   <body>
    
@@ -48,7 +49,7 @@
       <div class="header-bottom bg-white px-xl-8">
         <nav class="container">
           <div class="header-navbar navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html"><img src="{{asset('assets/site')}}/images/header-logo.png" alt="images"></a>
+         <a class="navbar-brand" href="/"> <img src="{{asset('assets/site')}}/images/heade.png" alt="images"></a> 
             <div class="collapse navbar-collapse" id="navbar-menu">
               <nav class="navbar-meanmenu">
                 <ul class="navbar-nav">
@@ -56,8 +57,8 @@
                   <li class="nav-item"> <a class="nav-link" href="/">ANASAYFA</a></li>
                   
                   <li class="nav-item"> <a class="nav-link" href="about.html">HAKKIMIZDA</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="service.html">HATİMLERİNİZ</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('country.add')}}">HATİMLERİNİZ</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('hatim.sorgula')}}">HATİMLERİNİZ</a></li>
+              <!--     <li class="nav-item"> <a class="nav-link" href="{{route('country.add')}}">Şehir Ekle</a></li> --> 
                  
                   
                  
@@ -98,7 +99,7 @@
                   <h4 class="mb-3 text-white">Sayfalar</h4>
                   <ul class="footer-list list-inline">
                     <li><a href="about.html">Hakkımızda</a></li>
-                    <li><a href="blog.html">Hatimleriniz</a></li>
+                    <li><a href="blog.html">Hatim</a></li>
                     <li><a href="single-2.html">İletişim</a></li>
                   </ul>
                 </div>
@@ -153,6 +154,7 @@
     </div>
   </footer>
     <!-- SVG Türkiye Haritası -->
+  
     <script src="{{asset('assets')}}/js/svg-turkiye-haritasi.js"></script>
     <script>
       svgturkiyeharitasi();
@@ -161,6 +163,8 @@
 
 <script src="{{asset('assets/site')}}/js/build.min.js"></script>
 <!-- endgulp -->
+ 
 
+@livewireScripts
   </body>
 </html>

@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\Admin\Country\CountryAddComponent;
 use App\Http\Livewire\Project\Detail\PartDetailComponent;
+use App\Http\Livewire\Project\SearchComponent;
+
+
+ use App\Http\Controllers\PeopleAddController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +31,13 @@ Route::get('/' , HomeComponent::class);
 
 Route::get('/sehir/{sira}' , PartDetailComponent::class)->name('country.detail');
 Route::get('/add' , CountryAddComponent::class)->name('country.add');
+
+Route::get('/hatim/sorgula' ,  SearchComponent::class)->name('hatim.sorgula');
+
+
+Route::controller(PeopleAddController::class)->group(function () {
+   
+    Route::post('/add/person', [PeopleAddController::class, 'addPerson'])->name('add.person');
+});
 
 
