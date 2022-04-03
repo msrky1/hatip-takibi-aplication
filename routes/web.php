@@ -35,9 +35,11 @@ Route::get('/add' , CountryAddComponent::class)->name('country.add');
 Route::get('/hatim/sorgula' ,  SearchComponent::class)->name('hatim.sorgula');
 
 
+
 Route::controller(PeopleAddController::class)->group(function () {
    
     Route::post('/add/person', [PeopleAddController::class, 'addPerson'])->name('add.person');
+
 });
 
 

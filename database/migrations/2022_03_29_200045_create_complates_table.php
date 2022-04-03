@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('complates', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('part_id');
+            $table->string('country_id');
             $table->timestamps();
         });
     }

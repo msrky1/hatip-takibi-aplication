@@ -1,61 +1,93 @@
+<main>
 <div class="page-title-area py-lg-6 py-5 bg-image-pattern">
     <div class="container">
-    <div class="page-title-wrapper text-center">
-       <h1 class="text-white mb-2">Hatim Sorgula</h1>
-      <nav class="page-breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Anasayfa</a></li>
-          <li class="breadcrumb-item active"></li>
-        </ol>
-      </nav>
+        <div class="page-title-wrapper text-center">
+            <h1 class="text-white mb-2">Seçtiğiniz Cüzü Görün</h1>
+            <nav class="page-breadcrumb">
+                <ol class="breadcrumb">
+
+
+
+                </ol>
+                <form class="call-to-action-form m-auto" method="GET">
+                    @csrf
+
+
+                    <div class="input-group">
+
+                        <input type="text" class="form-control" name="search" wire:model.debounce.3000ms ="query"
+                            placeholder="E-Mail Adresiniz" required> <br>
+                           
+
+                    </div>
+                    
+                </form>
+            </nav>
+        </div>
     </div>
-    </div>
-  </div>
-   <!--  ====================== About Area =============================  -->
-   <div class="about-area py-lg-10 py-8">
+</div>
+<!--  ====================== About Area =============================  -->
+<div class="service-area py-lg-8 py-6">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 col-lg-5 offset-lg-1 order-md-1">
-          <div class="donation-details mb-4 mb-md-0">
-            <div class="donation-wrapper">
-             <h3 class="text-primary pb-2">Event Information</h3>
-              <ul class="donation-list list-inline">
-                <li><span class="me-2 text-primary"><i class="fas fa-user"></i></span> Mr. Jhon Doe
-                </li>
-                <li><span class="me-2 text-primary"><i class="fas fa-calendar-plus"></i></span> 22 April 2021
-                </li>
-                <li><span class="me-2 text-primary"><i class="fas fa-clock"></i></span> Start At 08.00 AM
-                </li>
-                <li><span class="me-2 text-primary"><i class="fas fa-thumbtack"></i></span>212 St. Town Road, USA</li>
-                 
-
-                <li><span class="me-2 text-primary"><i class="fab fa-instagram"></i></span> Price : $100 USD
-                </li>
-              </ul>
-             
+        <div class="row"> <h3> Hatimleriniz </h3>
+            <div wire:loading>
+                <img width= "250px" src="{{ asset('assets/site') }}/images/loading.gif" > 
             </div>
-          </div>
+            
+            @if (!empty($query))
+
+                @if (!empty($persons))
+                    @foreach ($persons as $item)
+                        <div class="col-sm-6 col-lg-4">
+
+
+
+
+                            <div class="service-item my-3">
+                                <div class="service-wrapper m-0 bg-white">
+                                    <div class="service-image">
+                                        <img src="{{ asset('assets/site') }}/images/news/kuran.gif" alt="title">
+                                    </div>
+                                    <div class="service-content mt-3">
+                                 <h4>        {{$item['country_name']}} iline Ait </h4>
+                                        <h5 style="color: green"> {{ $item['part_id'] }}. Cüzü Okumaktasınız
+                                        </h5>
+                                           
+                                     <p style="color: red">   Allah Kabul Etsin </p>
+                                    
+                                    <!--      <button class="btn btn-success" type="submit" > Tamamladım </button> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    @endforeach
+                @else
+                    <div class="col-sm-6 col-lg-4">
+
+
+
+
+                        <div class="service-item my-3">
+                            <div class="service-wrapper m-0 bg-white">
+                               
+                                Sonuç Bulunamadı
+                           
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                @endif
+            @endif
+
         </div>
-        <div class="col-md-6 order-md-0">
-       <h3 class="text-primary mb-3">Hatimlerinizi E-mail adresinizi girerek sorgulayın</h3>
-       <form class="call-to-action-form m-auto" action="{{ route('add.person') }}" enctype="multipart/form-data"
-       method="POST">
-       @csrf
 
-
-       <div class="input-group">
-           
-           <input type="text" class="form-control" name="email" placeholder="E-Mail Adresiniz" required>
-           <button class="btn btn-success" type="submit">Sorgula</button>
-
-
-       </div>
-
-       </div>
-        </div>
-      </div>
     </div>
-  </div>
-  
-     
-  <!--  ====================== Team Area =============================  -->
+</div>
+
+</main>
+

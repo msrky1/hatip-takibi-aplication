@@ -35,7 +35,7 @@
           <div class="header-top-wrapper">
             <ul class="navbar-address list-inline m-0">
               <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/location-icon.svg" alt="title"></span>İstanbul - TÜRKİYE</li>
-              <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/phone-icon.svg" alt="title"></span> Numara
+              <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/phone-icon.svg" alt="title"></span> ------
               </li>
             </ul>
             <ul class="navbar-social list-inline m-0">
@@ -49,27 +49,23 @@
       <div class="header-bottom bg-white px-xl-8">
         <nav class="container">
           <div class="header-navbar navbar navbar-expand-lg">
-         <a class="navbar-brand" href="/"> <img src="{{asset('assets/site')}}/images/heade.png" alt="images"></a> 
+        <a class="navbar-brand" href="/"></a>  
             <div class="collapse navbar-collapse" id="navbar-menu">
               <nav class="navbar-meanmenu">
                 <ul class="navbar-nav">
              
                   <li class="nav-item"> <a class="nav-link" href="/">ANASAYFA</a></li>
                   
-                  <li class="nav-item"> <a class="nav-link" href="about.html">HAKKIMIZDA</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="{{route('hatim.sorgula')}}">HATİMLERİNİZ</a></li>
-              <!--     <li class="nav-item"> <a class="nav-link" href="{{route('country.add')}}">Şehir Ekle</a></li> --> 
+                  <li class="nav-item"> <a class="nav-link" href="{{route('hatim.sorgula')}}">CÜZLERİNİ GÖRÜNTÜLE</a></li>
                  
-                  
+                            
                  
-                 
-                  <li class="nav-item"> <a class="nav-link" href="contact.html">İLETİŞİM</a></li>
                 </ul>
               </nav>
-              <ul class="navbar-nav align-items-center ms-auto">
-                <li class="nav-item"> <a class="nav-link me-4" href="campaign.html">BAĞIŞ YAP</a></li>
+          <!--    <ul class="navbar-nav align-items-center ms-auto">
+                <li class="nav-item"> <a class="nav-link me-4" href="/">BAĞIŞ YAP</a></li>
               
-              </ul>
+              </ul> -->
             </div>
           </div>
         </nav>
@@ -87,8 +83,7 @@
         <div class="row">
           <div class="col-md-5 col-lg-4">
             <div class="footer-widget my-4 me-md-4">
-              <a href="#" class="footer-brand mb-4"><img src="{{asset('assets/site')}}/images/footer-brand.png" alt="title"></a>
-              <p class="text-white m-0">Hakkımızda
+            
               </p>
             </div>
           </div>
@@ -98,40 +93,16 @@
                 <div class="footer-widget my-3">
                   <h4 class="mb-3 text-white">Sayfalar</h4>
                   <ul class="footer-list list-inline">
-                    <li><a href="about.html">Hakkımızda</a></li>
-                    <li><a href="blog.html">Hatim</a></li>
-                    <li><a href="single-2.html">İletişim</a></li>
+                
+                    <li><a href="{{route('hatim.sorgula')}}">Cüzlerim</a></li>
                   </ul>
                 </div>
               </div>
+              
+              
               <div class="col-lg-3 col-6">
                 <div class="footer-widget my-3">
-                  <h4 class="mb-3 text-white">Useful Link</h4>
-                  <ul class="footer-list list-inline">
-                    <li><a href="service-2.html">Service</a></li>
-                    <li><a href="event.html">Event</a></li>
-                    <li><a href="team.html">Our Staff</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <div class="footer-widget my-3">
-                  <h4 class="mb-3 text-white">Information</h4>
-                  <ul class="footer-list list-inline">
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="campaign.html">Donation</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <div class="footer-widget my-3">
-                  <h4 class="mb-3 text-white">Get In Touch</h4>
-                  <ul class="footer-list list-inline">
-                    <li><a href="single-course.html">Courses</a></li>
-                    <li><a href="events.html">Event</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
+                 
                   <ul class="footer-social m-0 mt-4 list-inline" data-aos="slide-up">
                     <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>

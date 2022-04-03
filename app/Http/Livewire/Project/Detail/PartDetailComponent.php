@@ -6,6 +6,8 @@ use Livewire\Component;
 use App\Models\Country;
 use App\Models\Part;
 use App\Models\People;
+use App\Models\Person;
+
 class PartDetailComponent extends Component
 {
    public $sira;
@@ -29,7 +31,8 @@ class PartDetailComponent extends Component
     $people->country_id = $this->country_id;
     $people->part_id = $this->part_id;
     $people->name = $this->name;
-  
+    $people->country_name = $this->country_name	;
+    
     
     $people->save();
 
@@ -41,7 +44,36 @@ class PartDetailComponent extends Component
     public function render()
     {
         $country = Country::where('sira' , $this->sira)->first();
-        $part = Part::all();
-        return view('livewire.project.detail.part-detail-component' , ['country' => $country , 'part' => $part])->layout('layouts.base');
+        $part = Part::with('getPerson')->get();
+     
+        $people = Person::all();
+         
+        $delete = [];
+      
+        foreach($people as $p) {
+              
+
+            foreach($part as $pa) {
+
+                if ($country->id == $p->country_id){
+
+                if($p->part_id == $pa->id ) {
+
+
+                     
+                      array_push($delete, $pa->id);
+                      
+                }
+
+                }
+              
+            }
+
+          
+        }
+
+    
+        $partDetail = Part::with('getPerson')->first();
+        return view('livewire.project.detail.part-detail-component' , ['country' => $country , 'parts' => $part , 'delete' => $delete, 'person' => $people , 'partDetail' => $partDetail])->layout('layouts.base');
     }
 }
