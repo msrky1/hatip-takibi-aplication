@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Person;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class PeopleAddController extends Controller
 {
@@ -28,16 +29,34 @@ class PeopleAddController extends Controller
                
                 $person->name = $request->name;
                 $person->email = $request->email;
-                 $person->save();
-        
+                $person->save();
+
               
+   
         
                 }
-               
-                return redirect()->back()->with('message' , 'Cüz Başarıyla Eklendi');
+              
+              
+                    if(true) {
+
+                        $name = $person->name;
+                        $pdf  = PDF::loadView('pdf' , compact('name'));
+                       
+                       return $pdf->stream('Katılımızdan Dolayı Teşekkür Ederiz.pdf');
+
+                    }
+                
+                   
+                    return  redirect()->back()->with('message' , 'Başarıyla Eklendi!');
+
+              
+              
+
+                  
+             
         }else{
             
-            return redirect()->back()->with('getMessage' , 'Cüz Seçmediniz');
+            return redirect()->back()->with('getMessage' , 'En Az Bir Tane Seçim Yapmalısınız');
         }
      
 
@@ -45,5 +64,10 @@ class PeopleAddController extends Controller
       
      
      
+    }
+    public function deletePerson() {
+
+         
+
     }
 }

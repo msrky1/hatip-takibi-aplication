@@ -163,6 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+      
      
 
         /*
@@ -181,6 +182,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+     
 
     ],
 
@@ -197,7 +199,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
     
-
+      
       
     ])->toArray(),
 

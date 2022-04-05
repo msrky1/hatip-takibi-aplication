@@ -22,9 +22,9 @@ use App\Http\Livewire\Project\SearchComponent;
 
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+   // return view('dashboard');
+ // })->name('dashboard');
 
 
 Route::get('/' , HomeComponent::class);
@@ -40,6 +40,17 @@ Route::controller(PeopleAddController::class)->group(function () {
    
     Route::post('/add/person', [PeopleAddController::class, 'addPerson'])->name('add.person');
 
+    
 });
+
+Route::get('pdf' , function() {
+
+    $name = 'Ali'; 
+
+    $pdf  = PDF::loadView('pdf' , compact('name'));
+    return $pdf->stream();
+
+});
+
 
 

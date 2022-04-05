@@ -11,7 +11,8 @@ function svgturkiyeharitasi() {
         info.innerHTML = [
           '<div>',
           event.target.parentNode.getAttribute('data-iladi'),
-          '</div>'
+          '</div>',
+        
         ].join('');
       }
     }

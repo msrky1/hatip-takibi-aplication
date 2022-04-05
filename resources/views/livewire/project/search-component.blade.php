@@ -15,7 +15,7 @@
 
                     <div class="input-group">
 
-                        <input type="text" class="form-control" name="search" wire:model.debounce.3000ms ="query"
+                        <input type="email" class="form-control" name="search" wire:model.debounce.3000ms ="query"
                             placeholder="E-Mail Adresiniz" required> <br>
                            
 
