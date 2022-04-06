@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Person;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\Complated;
+
 
 class PeopleAddController extends Controller
 {
@@ -65,9 +67,17 @@ class PeopleAddController extends Controller
      
      
     }
-    public function deletePerson() {
+    public function deletePerson(Request $request )
 
-         
+    {      
+        
+        $present = $request->get('part_id');
+             
+           
+     
+               dd($present);
+    
+        
 
     }
 }

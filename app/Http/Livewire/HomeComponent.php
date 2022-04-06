@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Country;
 use App\Models\Person;
+use App\Models\Complated;
 class HomeComponent extends Component
 {
     public function render()
@@ -12,6 +13,7 @@ class HomeComponent extends Component
 
         $country = Country::all();
         $person = Person::all();
-        return view('livewire.home-component' , ['country' => $country , 'person' => $person])->layout('layouts.base');
+        $complated = Complated::all();
+        return view('livewire.home-component' , ['country' => $country , 'complated' => $complated ,  'person' => $person])->layout('layouts.base');
     }
 }

@@ -35,7 +35,7 @@
           <div class="header-top-wrapper">
             <ul class="navbar-address list-inline m-0">
               <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/location-icon.svg" alt="title"></span>İstanbul - TÜRKİYE</li>
-              <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/phone-icon.svg" alt="title"></span> ------
+             <!-- <li class="list-inline-item"><span class="icon"><img src="{{asset('assets/site')}}/images/phone-icon.svg" alt="title"></span> -->
               </li>
             </ul>
             <ul class="navbar-social list-inline m-0">
@@ -49,12 +49,14 @@
       <div class="header-bottom bg-white px-xl-8">
         <nav class="container">
           <div class="header-navbar navbar navbar-expand-lg">
-        <a class="navbar-brand" href="/"></a>  
+        
             <div class="collapse navbar-collapse" id="navbar-menu">
+             
               <nav class="navbar-meanmenu">
                 <ul class="navbar-nav">
-             
-                  <li class="nav-item"> <a class="nav-link" href="/">ANASAYFA</a></li>
+                 
+                  <li class="nav-item"> <a class="nav-link" href="/">GENÇLİK KURAN OKUYOR</a></li>
+              
                   
                   <li class="nav-item"> <a class="nav-link" href="{{route('hatim.sorgula')}}">CÜZLERİNİ GÖRÜNTÜLE</a></li>
                  

@@ -15,7 +15,7 @@ class PartDetailComponent extends Component
    public $part_id;
    public $name;
    public $number;
-    public function mount($sira) {
+   public function mount($sira) {
 
 
         $this->$sira = $sira;
@@ -40,7 +40,19 @@ class PartDetailComponent extends Component
 
     }
 
+    public function deletePerson($id)
 
+    {
+        
+        $person = Person::find($id);    
+        $person->delete();
+        session()->flash('message' , 'Person  Başarıyla Slindi!');
+    
+    
+        
+
+    }
+ 
     public function render()
     {
         $country = Country::where('sira' , $this->sira)->first();
@@ -71,9 +83,13 @@ class PartDetailComponent extends Component
 
           
         }
+        
+    
+        
 
     
+    
         $partDetail = Part::with('getPerson')->first();
-        return view('livewire.project.detail.part-detail-component' , ['country' => $country , 'parts' => $part , 'delete' => $delete, 'person' => $people , 'partDetail' => $partDetail])->layout('layouts.base');
+        return view('livewire.project.detail.part-detail-component' , ['country' => $country ,  'parts' => $part , 'delete' => $delete, 'person' => $people , 'partDetail' => $partDetail])->layout('layouts.base');
     }
 }

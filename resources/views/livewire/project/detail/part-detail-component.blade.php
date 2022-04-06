@@ -17,23 +17,132 @@
         <div class="mb-4 text-center">
             <h2 class="h1 text-white">Almak İstediğiniz Cüzü Seçin</h2>
             <p class="text-white">ve Formu Eksiksiz Doldurun
-            <h5 class="mb-3"> </h5>
-            </p>
-         
+
+
+
+                @if (Session::has('flash-message'))
+                    <div class="alert alert-danger">
+                        <strong>{{ Session::get('flash-message') }}</strong> <a style="color: red"
+                            href="{{ route('hatim.sorgula') }}"> Şimdi Görüntüleyin!</a>
+                    </div>
+                @endif
+                @if (Session::has('getHatimMessage'))
+                <div class="alert alert-danger">
+                    <strong>{{ Session::get('getHatimMessage') }}</strong> 
+                </div>
+            @endif
         </div>
 
     </div>
+
 </div>
 <!--  ====================== Service Area =============================  -->
+
 <div class="service-area py-lg-8 py-6">
     <div class="container">
         <div class="row">
+            <div class="service-item my-3">
+                <div class="service-wrapper bg-white">
+                    <div class="service-icon">
+                        <img src="{{ asset('assets/site') }}/images/service-icon.png" alt="title">
+                    </div>
+                    <div class="service-content mt-4">
+                        <h4 class="mb-3">{{ $country->name }}
+                            </h5>
+
+                            <ul class="entry-tags list-inline">
+                                <li class="list-inline-item">
+                                                               
+                                        <!--    <li class="list-inline-item">
+                                                <a href="#">Hatim: </a>
+                                            </li> -->
+
+                                 
+                            </ul>
+
+                            <a href="/" class="text-primary">Anasayfa <i class="fas fa-angle-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            @once
+            <div class="col-sm-6 col-lg-4">
+
+
+                <div class="service-item my-3">
+                    <div class="service-wrapper m-0 bg-white">
+
+                        <div class="service-image">
+                            <img src="{{ asset('assets/site') }}/images/hatim.jpg" alt="title">
+                        </div>
+                        <div class="service-content mt-3">
+                            <h5 class="mb-3">
+                                Komle Hatim Alın
+                            </h5>
 
 
 
+                            <a data-bs-toggle="modal" data-bs-target="#service2" href="#"
+                                class="text-primary">
+                                Dikkat! <i class="fas fa-angle-right ms-2"></i><br>
+
+
+                            </a>
+                            <form class="call-to-action-form m-auto" action="{{ route('hatim.al.toplu') }}"
+                            enctype="multipart/form-data" method="POST">
+                            @csrf
+
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="name" placeholder="Adınız Soyadınız"
+                                    required> <br>
+                                <input type="text" class="form-control" name="email"
+                                    placeholder="E-Mail Adresiniz" required>
+
+
+
+
+                            </div>
+
+
+                            <input type="hidden" name="country_id" value="{{ $country->id }}" required>
+                           
+
+                            <br>
+                            <button class="btn btn-success" type="submit">Hatim Al</button>
+
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-modal modal fade" id="service2">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Yükümlülük</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p style="color: red;">" Hatmi aldığınızda okuyacağınız kabul edilmiş olacak ve
+                                    Hatim Geri iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        @endonce
 
             @foreach ($country->getPerson ?? [] as $person)
                 @if ($country->id == $person->country_id)
+                   
                     <div class="col-sm-6 col-lg-4">
 
                         <div class="service-item my-3">
@@ -48,6 +157,7 @@
                                     <h5 class="mb-3"> {{ $person->part_id }}. Cüz </h5>
                                     <h2> Alındı! </h2>
                                     </h5>
+
 
 
 
@@ -113,14 +223,15 @@
                                 </div>
                             @endif
                             @if (Session::has('message'))
-                            <div class="alert alert-success">
-                                <strong>{{ Session::get('message') }}</strong> <a style="color: red"
-                                    href="{{ route('hatim.sorgula') }}"> Şimdi Görüntüleyin!</a>
-                            </div>
-                        @endif
+                                <div class="alert alert-success">
+                                    <strong>{{ Session::get('message') }}</strong> <a style="color: red"
+                                        href="{{ route('hatim.sorgula') }}"> Şimdi Görüntüleyin!</a>
+                                </div>
+                            @endif
                         </div>
                     </div>
                 @endonce
+
                 <div class="col-sm-6 col-lg-4">
 
                     <div class="service-item my-3">
@@ -160,10 +271,9 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Cüz, kelimesi Arapçada "parça", "bölüm", "kısım" anlamına gelir. "Kur'an" ile
-                                        ilgili bir
-                                        terim olarak bu kelime, Kur'an'ın eşit uzunlukta bölümlere ayrılmış
-                                        parçalarından birisini ifade eder.</p>
+                                    <p style="color: red;">" Cüzü aldığınızda okuyacağınız kabul edilmiş olacak ve cüz
+                                        geri
+                                        iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
 
 
                                 </div>
@@ -172,8 +282,6 @@
                     </div>
                 </div>
             @endforeach
-
-
 
 
 

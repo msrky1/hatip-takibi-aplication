@@ -16,9 +16,9 @@
                     <div class="input-group">
 
                         <input type="email" class="form-control" name="search" wire:model.debounce.3000ms ="query"
-                            placeholder="E-Mail Adresiniz" required> <br>
+                            placeholder="E-Mail Adresiniz Giriniz ve Lütfen Bekleyin" required> <br>
                            
-
+                       
                     </div>
                     
                 </form>
@@ -29,7 +29,7 @@
 <!--  ====================== About Area =============================  -->
 <div class="service-area py-lg-8 py-6">
     <div class="container">
-        <div class="row"> <h3> Hatimleriniz </h3>
+        <div class="row"> <h3> Cüzlerim </h3>
             <div wire:loading>
                 <img width= "250px" src="{{ asset('assets/site') }}/images/loading.gif" > 
             </div>

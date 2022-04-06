@@ -39,14 +39,6 @@
             </div>
            </div>
     </div>
-    <div class="container" > 
-        <div class="row">
-
- 
-            <a href="http://Genclikkuranokuyor.com/hatim/sorgula" >   Aldığınız Cüzleri Görüntülemek İçin Buraya Tıklayın </a><br>
-            <a href="http://Genclikkuranokuyor.com/" >   Anasayfaya Dön </a>
-
-        </div>
-    </div>
+    
 </body>
 </html>
