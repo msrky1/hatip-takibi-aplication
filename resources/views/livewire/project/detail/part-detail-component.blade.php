@@ -57,88 +57,16 @@
                                                 <a href="#">Hatim: </a>
                                             </li> -->
 
-                                 
+
+                                           
+                                  
                             </ul>
 
                             <a href="/" class="text-primary">Anasayfa <i class="fas fa-angle-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
-            @once
-            <div class="col-sm-6 col-lg-4">
-
-
-                <div class="service-item my-3">
-                    <div class="service-wrapper m-0 bg-white">
-
-                        <div class="service-image">
-                            <img src="{{ asset('assets/site') }}/images/hatim.jpg" alt="title">
-                        </div>
-                        <div class="service-content mt-3">
-                            <h5 class="mb-3">
-                                Komle Hatim Alın
-                            </h5>
-
-
-
-                            <a data-bs-toggle="modal" data-bs-target="#service2" href="#"
-                                class="text-primary">
-                                Dikkat! <i class="fas fa-angle-right ms-2"></i><br>
-
-
-                            </a>
-                            <form class="call-to-action-form m-auto" action="{{ route('hatim.al.toplu') }}"
-                            enctype="multipart/form-data" method="POST">
-                            @csrf
-
-
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="name" placeholder="Adınız Soyadınız"
-                                    required> <br>
-                                <input type="text" class="form-control" name="email"
-                                    placeholder="E-Mail Adresiniz" required>
-
-
-
-
-                            </div>
-
-
-                            <input type="hidden" name="country_id" value="{{ $country->id }}" required>
-                           
-
-                            <br>
-                            <button class="btn btn-success" type="submit">Hatim Al</button>
-
-
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-modal modal fade" id="service2">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Yükümlülük</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close">
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p style="color: red;">" Hatmi aldığınızda okuyacağınız kabul edilmiş olacak ve
-                                    Hatim Geri iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        @endonce
+           
 
             @foreach ($country->getPerson ?? [] as $person)
                 @if ($country->id == $person->country_id)
@@ -160,7 +88,7 @@
 
 
 
-
+                               
 
                                 </div>
                             </div>
@@ -176,12 +104,15 @@
 
 
 
-
+                       
 
 
             @foreach ($parts as $item)
                 @if (in_Array($item->id, $delete))
-                    @continue
+
+          
+     
+                    @continue   
                 @endif
 
                 @once
@@ -271,7 +202,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p style="color: red;">" Cüzü aldığınızda okuyacağınız kabul edilmiş olacak ve cüz
+                                    <p style="color: red;">"Cüzü aldığınızda okuyacağınız kabul edilmiş olacak ve cüz
                                         geri
                                         iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
 
@@ -283,12 +214,86 @@
                 </div>
             @endforeach
 
+        </form>
+            @once
+            <div class="col-sm-6 col-lg-4">
 
 
+                <div class="service-item my-3">
+                    <div class="service-wrapper m-0 bg-white">
+
+                        <div class="service-image">
+                            <img src="{{ asset('assets/site') }}/images/hatim.jpg" alt="title">
+                        </div>
+                        <div class="service-content mt-3">
+                            <h5 class="mb-3">
+                                Bütün Hatim Alın
+                            </h5>
+
+
+
+                            <a data-bs-toggle="modal" data-bs-target="#service2" href="#"
+                                class="text-primary">
+                                Dikkat! <i class="fas fa-angle-right ms-2"></i><br>
+
+
+                            </a>
+                            <form class="call-to-action-form m-auto" action="{{ route('hatim.al.toplu') }}"
+                            enctype="multipart/form-data" method="POST">
+                            @csrf
+
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="name" placeholder="Adınız Soyadınız"
+                                    required> <br>
+                                <input type="text" class="form-control" name="email"
+                                    placeholder="E-Mail Adresiniz" required>
+
+
+
+
+                            </div>
+
+
+                            <input type="hidden" name="country_id" value="{{ $country->id }}" required>
+                           
+
+                            <br>
+                            <button class="btn btn-success" type="submit">Hatim Al</button>
+
+
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-modal modal fade" id="service2">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Yükümlülük</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p style="color: red;">"Hatmi aldığınızda okuyacağınız kabul edilmiş olacak ve
+                                    Hatim Geri iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        @endonce
 
         </div>
 
 
     </div>
 </div>
-</form>
+

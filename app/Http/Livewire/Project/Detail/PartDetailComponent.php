@@ -7,6 +7,8 @@ use App\Models\Country;
 use App\Models\Part;
 use App\Models\People;
 use App\Models\Person;
+use  Illuminate\Support\Facades\DB;
+
 
 class PartDetailComponent extends Component
 {
@@ -74,18 +76,20 @@ class PartDetailComponent extends Component
 
                      
                       array_push($delete, $pa->id);
+
+                      
                       
                 }
 
                 }
               
             }
-
+ 
           
         }
-        
-    
-        
+
+      
+      
 
     
     

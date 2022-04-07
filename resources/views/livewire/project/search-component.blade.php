@@ -49,7 +49,7 @@
                                         <img src="{{ asset('assets/site') }}/images/news/kuran.gif" alt="title">
                                     </div>
                                     <div class="service-content mt-3">
-                                 <h4>        {{$item['country_name']}} iline Ait </h4>
+                                 <h4>        {{$item['country_name']}} iline a  it </h4>
                                         <h5 style="color: green"> {{ $item['part_id'] }}. Cüzü Okumaktasınız
                                         </h5>
                                            

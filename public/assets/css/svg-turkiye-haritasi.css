@@ -35,7 +35,7 @@ p div {
 }
 #svg-turkiye-haritasi path {
   cursor: pointer;
-  fill: #077582;
+  fill: rgba(0, 190, 190, 0.406);
 }
 #svg-turkiye-haritasi path:hover {
   fill: orange;
