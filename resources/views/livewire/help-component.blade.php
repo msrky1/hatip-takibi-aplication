@@ -30,7 +30,7 @@
 
               </li>
               <li>
-                Komle Hatim Almak İsterseniz Formu Doldurduktan Sonra Komple Hatim Al Buttonunu Kullanarak Hatim Alabilirsiniz.
+                Bütün Hatim Almak İsterseniz Formu Doldurduktan Sonra Bütün Hatim Al Buttonunu Kullanarak Hatim Alabilirsiniz.
                </li>
               <p style="color: red"> Not: Cüzü ve Hatmi Aldıktan Sonra İptal Edemezsiniz. </p>
             </ul>

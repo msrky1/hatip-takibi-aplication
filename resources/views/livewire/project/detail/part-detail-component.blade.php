@@ -142,10 +142,29 @@
                                     <input type="hidden" name="country_name" value="{{ $country->name }}" required>
 
                                     <br>
-                                    <button class="btn btn-success" type="submit">Seçtiğin Cüzleri Al</button>
+                                    <button  class="btn btn-success" type="submit">Seçtiğin Cüzleri Al</button>
 
 
 
+                            </div>
+                            <div class="service-modal modal fade" id="service1">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Yükümlülük</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close">
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p style="color: red;">"Cüzü aldığınızda okuyacağınız kabul edilmiş olacak ve cüz
+                                                geri
+                                                iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
+        
+        
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             @if (Session::has('getMessage'))
                                 <div class="alert alert-danger">

@@ -57,6 +57,8 @@ class PartDetailComponent extends Component
  
     public function render()
     {
+
+        
         $country = Country::where('sira' , $this->sira)->first();
         $part = Part::with('getPerson')->get();
      
@@ -78,6 +80,7 @@ class PartDetailComponent extends Component
                       array_push($delete, $pa->id);
 
                       
+
                       
                 }
 
@@ -87,8 +90,15 @@ class PartDetailComponent extends Component
  
           
         }
+          
 
-      
+        $partdetailss = Country::find(46);
+
+        dd($partdetailss->getComplated->name);
+
+
+
+        
       
 
     
