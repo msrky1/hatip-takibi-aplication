@@ -58,6 +58,8 @@ class PeopleAddController extends Controller
              
         }else{
             
+             
+
             return redirect()->back()->with('getMessage' , 'En Az Bir Tane Seçim Yapmalısınız');
         }
      

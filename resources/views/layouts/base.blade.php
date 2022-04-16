@@ -166,12 +166,14 @@
         svgturkiyeharitasi();
     </script>
 
-
-    <script src="{{ asset('assets/site') }}/js/build.min.js"></script>
+@livewireScripts
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   <script src="{{ asset('assets/site') }}/js/build.min.js"></script>
     <!-- endgulp -->
 
 
-    @livewireScripts
+ 
+
 </body>
 
 </html>

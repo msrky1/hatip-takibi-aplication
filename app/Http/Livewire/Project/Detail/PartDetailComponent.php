@@ -92,14 +92,11 @@ class PartDetailComponent extends Component
         }
           
 
-        $partdetailss = Country::find(46);
-
-        dd($partdetailss->getComplated->name);
-
+   
+          
 
 
-        
-      
+
 
     
     

@@ -53,9 +53,25 @@
                             <ul class="entry-tags list-inline">
                                 <li class="list-inline-item">
                                                                
-                                        <!--    <li class="list-inline-item">
-                                                <a href="#">Hatim: </a>
-                                            </li> -->
+                                    <li class="list-inline-item">
+
+                                        @if (count($delete) == 30 )
+                                        <a href="#"> {{count($delete)}}/30 Tamamlandı! </a>
+                   
+
+                               
+                                        @else
+                                        <a href="#">Alınan Cüz:   {{count($delete)}} </a>
+                                    </li> 
+                                    <li class="list-inline-item">
+                                        <a href="#">Kalan:    {{count($parts)-count($delete)}} </a>
+                                    </li> 
+
+                                 
+
+                                        @endif
+                                                
+                                           
 
 
                                            
@@ -87,9 +103,6 @@
                                     </h5>
 
 
-
-                               
-
                                 </div>
                             </div>
                         </div>
@@ -120,11 +133,16 @@
 
                         <div class="service-item my-3">
                             <div class="service-wrapper m-0 bg-white">
+                             
+                                <a data-bs-toggle="modal" data-bs-target="#service1" href="#" class="text-primary">
+                                    Dikkat! <i class="fas fa-angle-right ms-2"></i><br>
 
-                                <form class="call-to-action-form m-auto" action="{{ route('add.person') }}"
-                                    enctype="multipart/form-data" method="POST">
+
+                                </a>
+                                <form  class="call-to-action-form m-auto"  action="{{ route('add.person') }} "
+                                    enctype="multipart/form-data" method="POST" >
                                     @csrf
-
+                          
 
                                     <div class="input-group">
                                         <input type="text" class="form-control" name="name" placeholder="Adınız Soyadınız"
@@ -132,7 +150,7 @@
                                         <input type="text" class="form-control" name="email"
                                             placeholder="E-Mail Adresiniz" required>
 
-
+                           
 
 
                                     </div>
@@ -142,12 +160,13 @@
                                     <input type="hidden" name="country_name" value="{{ $country->name }}" required>
 
                                     <br>
+                                 
                                     <button  class="btn btn-success" type="submit">Seçtiğin Cüzleri Al</button>
 
 
 
                             </div>
-                            <div class="service-modal modal fade" id="service1">
+                            <div class="service-modal modal fade" id="service2">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -157,11 +176,10 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <p style="color: red;">"Cüzü aldığınızda okuyacağınız kabul edilmiş olacak ve cüz
-                                                geri
-                                                iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
-        
-        
+                                            <p style="color: red;">"Hatmi aldığınızda okuyacağınız kabul edilmiş olacak ve
+                                                Hatim Geri iade edilemeyecektir. Sorumluluğu sizlere aittir." </p>
+            
+            
                                         </div>
                                     </div>
                                 </div>
@@ -204,8 +222,7 @@
 
                                 <input type="checkbox" name="part_id[]" value="{{ $item->id }}">
 
-
-
+                           
                             </div>
                         </div>
                     </div>
@@ -251,7 +268,7 @@
 
 
 
-                            <a data-bs-toggle="modal" data-bs-target="#service2" href="#"
+                            <a data-bs-toggle="modal" data-bs-target="#service24" href="#"
                                 class="text-primary">
                                 Dikkat! <i class="fas fa-angle-right ms-2"></i><br>
 
@@ -287,8 +304,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="service-modal modal fade" id="service2">
+             
+                <div class="service-modal modal fade" id="service24">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">

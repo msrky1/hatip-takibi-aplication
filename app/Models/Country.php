@@ -25,6 +25,14 @@ class Country extends Model
         return $this->hasMany(Complated::class , 'country_id');
     }
 
-   
+
+    public function persons()
+    {
+        return $this->hasMany(Person::class, 'country_id');
+    }
+    public function hatims()
+    {
+        return $this->hasMany(Complated::class, 'country_id');
+    }
 
 }
