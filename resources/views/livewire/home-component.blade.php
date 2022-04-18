@@ -8,40 +8,43 @@
                             <div class="prayer-timeline">
                                 <div class="prayer-wrapper">
 
-                                    <h6 class="text-primary mb-3">{{ $pers->name }}  
-                                      @if (  count($pers->persons) == 30 )
-                                          
-                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-                                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                                      </svg>   
-                                      @endif
+                                    <h6 class="text-primary mb-3">{{ $pers->name }}
+                                        @if (count($pers->persons) == 30)
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-bookmark-check" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                                <path
+                                                    d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
+                                            </svg>
+                                        @endif
 
                                     </h6>
                                     <span data-aos="fade-up" class="p-2 px-3 text-primary rounded  bg-light">
 
 
-                                        @if ( count($pers->persons) == 30 )
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
-                                        </svg> Alınan Cüz : {{ count($pers->persons) }} 
-
-                                        @else 
-                                      
-                                        <span class="me-1"><i class="far fa-clock"></i></span>     Alınan Cüz : {{ count($pers->persons) }} 
-
+                                        @if (count($pers->persons) == 30)
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-bookmark-star-fill"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z" />
+                                            </svg> Alınan Cüz : {{ count($pers->persons) }}
+                                        @else
+                                            <span class="me-1"><i class="far fa-clock"></i></span> Alınan
+                                            Cüz : {{ count($pers->persons) }}
                                         @endif
 
 
-                                        
-                                 
-                                        </span><br>
 
 
-                                        <span data-aos="fade-up" class="p-2 px-3 text-primary rounded  bg-light">
+                                    </span><br>
 
-                                    <span class="me-1"><i class="far fa-index"></i></span>Hatim:
-                                    {{ count($pers->hatims) }}</span>
+
+                                    <span data-aos="fade-up" class="p-2 px-3 text-primary rounded  bg-light">
+
+                                        <span class="me-1"><i class="far fa-index"></i></span>Hatim:
+                                        {{ count($pers->hatims) }}</span>
 
 
                                 </div>
@@ -796,103 +799,122 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6 col-md-10">
+
+
+                <div class="course-feature mb-4 bg-white rounded">
+                    <h4 class="mb-1 text-primary">Liderlik</h4>
+                    <p>En Çok Hatim Okuyan İllerimiz</p>
+                
+
+                    @foreach ($lider as $li)
+
+                        <h3> {{ $li->name }}: {{ count($li->hatims) }}  Hatim</h3>
+
+                    @endforeach
+
+                      <a href="#" class="btn btn-primary w-100">Tümünü Gör</a> 
+                </div>
+                
+
+
+
+            </div>
+            
+           
+
 
 
 
         </div>
-
-
-
-
     </div>
-</div>
-<!--  ====================== About Area =============================  -->
-<div class="about-area pt-lg-10 pt-8">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="text-center text-md-start col-md-6">
-                <div class="section-title mb-4">
+    <!--  ====================== About Area =============================  -->
+    <div class="about-area pt-lg-10 pt-8">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="text-center text-md-start col-md-6">
+                    <div class="section-title mb-4">
 
-                    <h2 class="h1 text-primary"> Gençlik Kuran Okuyor</h2>
+                        <h2 class="h1 text-primary"> Gençlik Kuran Okuyor</h2>
+                    </div>
+                    <p>
+                        Hatimlerinizi Görün
+                    </p>
+                    <p>
+
+                    </p>
+                    <div data-aos="fade-up" class="btn-container">
+                        <a href="{{ route('hatim.sorgula') }}"
+                            class="btn btn-primary text-white mt-4 mb-4 mb-md-0">Aldığınız Cüzleri Sorgulayın <i
+                                class="fas fa-angle-right ms-1"></i></a>
+                    </div>
                 </div>
-                <p>
-                    Hatimlerinizi Görün
-                </p>
-                <p>
+                <div class="col-md-6 col-lg-5 offset-lg-1">
+                    <div class="upcoming-prayer bg-primary bg-image-pattern">
+                        <div class="upcoming-prayer-wrapper">
+                            <h3 class="text-primary">Bitiş Süresi</h3>
 
-                </p>
-                <div data-aos="fade-up" class="btn-container">
-                    <a href="{{ route('hatim.sorgula') }}"
-                        class="btn btn-primary text-white mt-4 mb-4 mb-md-0">Aldığınız Cüzleri Sorgulayın <i
-                            class="fas fa-angle-right ms-1"></i></a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-5 offset-lg-1">
-                <div class="upcoming-prayer bg-primary bg-image-pattern">
-                    <div class="upcoming-prayer-wrapper">
-                        <h3 class="text-primary">Bitiş Süresi</h3>
+                            <ul class="prayer-meta list-inline   mt-4 ">
 
-                        <ul class="prayer-meta list-inline   mt-4 ">
+                                <li class="list-inline-item"><small><i class="far fa-clock text-primary"></i>
+                                        <div class="container">
+                                            <p class="timer">
+                                            <h2> <span id="timer-gunler"></span>
+                                                <span id="timer-saatler"></span>
+                                            </h2>
+                                            <h4> <span id="timer-dakikalar"></span> </h4>
 
-                            <li class="list-inline-item"><small><i class="far fa-clock text-primary"></i>
-                                    <div class="container">
-                                        <p class="timer">
-                                        <h2> <span id="timer-gunler"></span>
-                                            <span id="timer-saatler"></span>
-                                        </h2>
-                                        <h4> <span id="timer-dakikalar"></span> </h4>
+                                            <h5> <span id="timer-saniyeler"></span> </h5>
+                                            </p>
+                                        </div>
+                                    </small></li>
+                            </ul>
 
-                                        <h5> <span id="timer-saniyeler"></span> </h5>
-                                        </p>
-                                    </div>
-                                </small></li>
-                        </ul>
+                            <script>
+                                var endDate = new Date("May 03, 2022 12:00:00").getTime();
+                                var timer = setInterval(function() {
 
-                        <script>
-                            var endDate = new Date("May 03, 2022 12:00:00").getTime();
-                            var timer = setInterval(function() {
+                                    let now = new Date().getTime();
+                                    let t = endDate - now;
 
-                                let now = new Date().getTime();
-                                let t = endDate - now;
+                                    if (t >= 0) {
 
-                                if (t >= 0) {
+                                        let gunler = Math.floor(t / (1000 * 60 * 60 * 24));
+                                        let saatler = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                        let dakikalar = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                                        let saniyeler = Math.floor((t % (1000 * 60)) / 1000);
 
-                                    let gunler = Math.floor(t / (1000 * 60 * 60 * 24));
-                                    let saatler = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                                    let dakikalar = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-                                    let saniyeler = Math.floor((t % (1000 * 60)) / 1000);
+                                        document.getElementById("timer-gunler").innerHTML = gunler +
+                                            "<span class='label'> gün </span>";
 
-                                    document.getElementById("timer-gunler").innerHTML = gunler +
-                                        "<span class='label'> gün </span>";
+                                        document.getElementById("timer-saatler").innerHTML = ("0" + saatler).slice(-2) +
+                                            "<span class='label'> saat</span>";
 
-                                    document.getElementById("timer-saatler").innerHTML = ("0" + saatler).slice(-2) +
-                                        "<span class='label'> saat</span>";
+                                        document.getElementById("timer-dakikalar").innerHTML = ("0" + dakikalar).slice(-2) +
+                                            "<span class='label'> dakika </span>";
 
-                                    document.getElementById("timer-dakikalar").innerHTML = ("0" + dakikalar).slice(-2) +
-                                        "<span class='label'> dakika </span>";
-
-                                    document.getElementById("timer-saniyeler").innerHTML = ("0" + saniyeler).slice(-2) +
-                                        "<span class='label'> saniye</span>";
-                                } else {
-                                    document.getElementById("timer").innerHTML = "Proğramın Süresi Sona Ermiştir";
-                                }
+                                        document.getElementById("timer-saniyeler").innerHTML = ("0" + saniyeler).slice(-2) +
+                                            "<span class='label'> saniye</span>";
+                                    } else {
+                                        document.getElementById("timer").innerHTML = "Proğramın Süresi Sona Ermiştir";
+                                    }
 
 
-                            }, 1000);
-                        </script>
+                                }, 1000);
+                            </script>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!--  ====================== Video Area =============================  -->
-<div class="video-area py-lg-10 py-8">
-    <div class="container">
+    <!--  ====================== Video Area =============================  -->
+    <div class="video-area py-lg-10 py-8">
+        <div class="container">
 
+        </div>
     </div>
-</div>
 
 
 
@@ -914,4 +936,4 @@
 
 
 
-<!--
+    <!--

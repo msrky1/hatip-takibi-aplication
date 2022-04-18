@@ -35,4 +35,9 @@ class Country extends Model
         return $this->hasMany(Complated::class, 'country_id');
     }
 
+    public function hatimsLider()
+    {
+        return $this->belongsToMany(Complated::class, 'country_id');
+    }
+
 }

@@ -41,7 +41,7 @@ Route::get('/hatim/sorgula' ,  SearchComponent::class)->name('hatim.sorgula');
 Route::controller(PeopleAddController::class)->group(function () {
    
     Route::post('/add/person', [PeopleAddController::class, 'addPerson'])->name('add.person');
-    Route::post('/delete/person', [PeopleAddController::class, 'deletePerson'])->name('delete.person');
+    Route::get('/delete/person', [PartDetailComponent::class, 'deletePerson'])->name('delete.person');
     Route::get('/hatim/al', [PeopleAddController::class, 'deletePerson'])->name('hatim.al');
 
 

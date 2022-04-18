@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Country;
 use App\Models\Part;
 use App\Models\People;
+use App\Modes\Hatim;
 use App\Models\Person;
 use  Illuminate\Support\Facades\DB;
 
@@ -42,13 +43,13 @@ class PartDetailComponent extends Component
 
     }
 
-    public function deletePerson($id)
+    public function deletePerson()
 
     {
-        
-        $person = Person::find($id);    
-        $person->delete();
-        session()->flash('message' , 'Person  Başarıyla Slindi!');
+       
+       
+        $delete = [];
+        dd($delete);
     
     
         
@@ -76,10 +77,14 @@ class PartDetailComponent extends Component
                 if($p->part_id == $pa->id ) {
 
 
-                     
-                      array_push($delete, $pa->id);
+            
 
+                      array_push($delete, $pa->id);
                       
+                      
+                  
+
+            
 
                       
                 }
@@ -92,8 +97,8 @@ class PartDetailComponent extends Component
         }
           
 
-   
-          
+        
+           
 
 
 

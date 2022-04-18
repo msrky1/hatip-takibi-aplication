@@ -31,10 +31,34 @@ class HomeComponent extends Component
         $persons = Country::has('persons' , '>=', 1)->get();
         
         $persons = Country::has('hatims' , '>=' , 1)->get();
+
+
+        $lider = Country::has('hatims' , '>=' , 5)->orderBy('id' , 'ASC')->paginate(10);
       
+     
+
+         
+  
+       // $postss = Country::withMax('hatims as total_hatims', 'country_id')->orderBy('total_hatims' , 'DESC')->get();
+ 
+    //    foreach ($postss as $post) {
+         //             var_dump($post->total_hatims);
+     //  }
+      //  $posts = Country::withCount('hatims')->orderByDesc("country_id")->paginate(10);
+
+        
+       // dd($posts);
+  
 
        
 
-        return view('livewire.home-component' , [  'persons' => $persons, 'country' => $country , 'complated' => $complated ,  'person' => $person])->layout('layouts.base');
+        return view('livewire.home-component' , [ 
+            
+            'lider' => $lider,
+          
+        
+        
+        
+        'persons' => $persons, 'country' => $country , 'complated' => $complated ,  'person' => $person])->layout('layouts.base');
     }
 }

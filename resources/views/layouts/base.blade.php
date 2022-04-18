@@ -11,11 +11,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <meta name="description" content="Gençlik Kuran Okuyor Web Üzerinde Toplu Cüz Okuma Uygulaması">
+    <meta name="description" content="Gençlik Kuran Okuyor. Web Üzerinde Toplu Cüz,Hatim  Okuma Uygulaması">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{ asset('assets/site') }}/images/favicon.png" type="images/x-icon">
 
-    <meta name="google-site-verification" content="j6iNNZ8v8pBHjwhQP0BrcQK-Qi6zeuGisPoiChA1ovc" />
+    
     <!-- gulp:css -->
     <link rel="stylesheet" href="{{ asset('assets/site') }}/css/app.min.css">
     @livewireStyles
@@ -167,7 +167,9 @@
     </script>
 
 @livewireScripts
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
    <script src="{{ asset('assets/site') }}/js/build.min.js"></script>
     <!-- endgulp -->
 

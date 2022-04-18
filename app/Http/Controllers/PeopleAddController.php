@@ -44,7 +44,7 @@ class PeopleAddController extends Controller
                         $name = $person->name;
                         $pdf  = PDF::loadView('pdf' , compact('name'));
                        
-                       return $pdf->stream('Katılımızdan Dolayı Teşekkür Ederiz.pdf');
+                       return $pdf->download('Katılımızdan Dolayı Teşekkür Ederiz.pdf');
 
                     }
                 
