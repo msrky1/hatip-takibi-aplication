@@ -55,8 +55,10 @@
 
                                 <li class="list-inline-item">
 
-                                    @if (count($delete) == 30)
+                                    @if (count($delete) == 3)
                                         <a href="#"> {{ count($delete) }}/30 Tamamlandı! </a>
+                                    
+                                       
                                     @else
                                         <a href="#">Alınan Cüz: {{ count($delete) }} </a>
                                 </li>
@@ -65,22 +67,7 @@
                                 </li>
                                 @endif
 
-                                @if (count($delete) >= 5)
-                                    <!-- <div class="col-sm-6 col-lg-4">
-                              
-                                          <div class="service-item my-3">
-                                              <div class="service-wrapper m-0 bg-white">
-                                                     
-                                                 <form action="{{ route('delete.person') }}"  >
-                              
-                                                          <button class="btn btn-success" type="submit" > Hatim Tamamlandı! </button>
-                                                   </form>
-                                              </div>
-                              
-                                          </div>
-                                      </div>
-                              -->
-                                @endif
+                           
 
 
 
@@ -109,8 +96,24 @@
                                     <h5 class="mb-3"> {{ $person->part_id }}. Cüz </h5>
                                     <h2> Alındı! </h2>
                                     </h5>
+                                  
+                                    @if (count($delete) >= 30)
+                            
+                            
+                            
+                                
+                                    {{   $person->delete();}}
 
+                               
 
+   
+                             <script>
+                                    setTimeout(function(){
+                                        window.location.reload(1);
+                                     }, 2);
+                             </script>
+                                   
+                              @endif
                                 </div>
                             </div>
                         </div>
@@ -228,8 +231,14 @@
 
                                 <input type="checkbox" name="part_id[]" value="{{ $item->id }}">
 
-
+                                
                             </div>
+                            <h5 class="mb-3">
+                            @if (count($delete) == 29)
+                                      
+                                       <h5 style="color:red;"> Son Cüzü Alarak  Hatimi<br></h5> <h4 style="color:green;"> Tamamlayabilirsin </h4>                                  
+                                @endif
+                            </h5>
                         </div>
                     </div>
 
@@ -339,7 +348,6 @@
 
         </div>
 
-
     </div>
 </div>
 <script>
@@ -348,4 +356,7 @@
    window.location.reload(1);
 }, 3000);
     }
+
+
+ 
 </script>

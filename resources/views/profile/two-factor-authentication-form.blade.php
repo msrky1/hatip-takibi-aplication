@@ -23,7 +23,7 @@
         </div>
 
         @if ($this->enabled)
-            @if ($showingQrCode)
+            @if ($ShowimgQrCode)
                 <div class="mt-4 max-w-xl text-sm text-gray-600">
                     <p class="font-semibold">
                         {{ __('Two factor authentication is now enabled. Scan the following QR code using your phone\'s authenticator application.') }}
@@ -35,7 +35,7 @@
                 </div>
             @endif
 
-            @if ($showingRecoveryCodes)
+            @if ($ShowimgRecoveryCodes)
                 <div class="mt-4 max-w-xl text-sm text-gray-600">
                     <p class="font-semibold">
                         {{ __('Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.') }}
@@ -58,7 +58,7 @@
                     </x-jet-button>
                 </x-jet-confirms-password>
             @else
-                @if ($showingRecoveryCodes)
+                @if ($ShowimgRecoveryCodes)
                     <x-jet-confirms-password wire:then="regenerateRecoveryCodes">
                         <x-jet-secondary-button class="mr-3">
                             {{ __('Regenerate Recovery Codes') }}

@@ -789,7 +789,7 @@
 
                     <div class="course-feature bg-white rounded">
                         <div class="course-block-author mt-3">
-                            Toplam <br> Alınan Cüz
+                            Anlık  <br> Toplam Cüz
 
                             <div class="info">
                                 <h4>{{ $person->count() }}</h4>
@@ -799,27 +799,33 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-10">
-
-
-                <div class="course-feature mb-4 bg-white rounded">
-                    <h4 class="mb-1 text-primary">Liderlik</h4>
-                    <p>En Çok Hatim Okuyan İllerimiz</p>
-                
-
-                    @foreach ($lider as $li)
-
-                        <h3> {{ $li->name }}: {{ count($li->hatims) }}  Hatim</h3>
-
-                    @endforeach
-
-                      <a href="#" class="btn btn-primary w-100">Tümünü Gör</a> 
+            <div class="card">
+                            
+                <h4 class="header-title">Hatim ve İl Sayıları</h4>
+                <div class="data-tables datatable-dark">
+                    <table id="dataTables" class="text-center">
+                        <thead class="text-capitalize">
+                            <tr>
+                                <th>İl</th>
+                                <th>Hatim Sayısı</th>
+                                <th>Şuanki Cüz Sayısı:</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($lider as $li)
+                            <tr>
+                                <td>{{ $li->name }}</td>
+                                <td>{{ count($li->hatims) }} </td>
+                                <td>{{ count($li->persons) }} </td>
+                               
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
-                
-
-
-
             </div>
+        </div>
             
            
 
@@ -838,7 +844,7 @@
                         <h2 class="h1 text-primary"> Gençlik Kuran Okuyor</h2>
                     </div>
                     <p>
-                        Hatimlerinizi Görün
+                       Seçtiğiniz Cüzleri Görün
                     </p>
                     <p>
 
@@ -922,18 +928,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--

@@ -28,12 +28,12 @@ class HomeComponent extends Component
            
        
        
-        $persons = Country::has('persons' , '>=', 1)->get();
+        $persons = Country::has('persons' , '>=', 0)->get();
         
-        $persons = Country::has('hatims' , '>=' , 1)->get();
+        $persons = Country::has('hatims' , '>=' , 0)->get();
 
 
-        $lider = Country::has('hatims' , '>=' , 5)->orderBy('id' , 'ASC')->paginate(10);
+        $lider = Country::has('hatims' , '>=' , 0)->orderBy('id' , 'ASC')->get();
       
      
 

@@ -15,6 +15,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{ asset('assets/site') }}/images/favicon.png" type="images/x-icon">
 
+    <meta name="keywords" content="Kuran Okuma, Kuran Meaili, Kuran hatmi, Kuran Okuma Uygulaması, Toplu Cüz Okuma Uygulaması, 
+    Kuran, Hatim, Dergah, Cüz Okuma, Yasin Suresi, İlmihal, Kuran Ayetleri, Hadis" > 
+
+
+
+
+
+   
+  
+ 
+    <!-- Start datatable css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="{{asset('data-asset-table')}}/css/typography.css">
+    <link rel="stylesheet" href="{{asset('data-asset-table')}}/css/default-css.css">
+    <link rel="stylesheet" href="{{asset('data-asset-table')}}/css/styles.css">
+    <link rel="stylesheet" href="{{asset('data-asset-table')}}/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="{{asset('data-asset-table')}}/js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+
+
+
+
+
+
     
     <!-- gulp:css -->
     <link rel="stylesheet" href="{{ asset('assets/site') }}/css/app.min.css">
@@ -61,6 +91,7 @@
                         <li class="list-inline-item"><span class="icon"><img
                                     src="{{ asset('assets/site') }}/images/location-icon.svg"
                                     alt="title"></span>İstanbul - TÜRKİYE</li>
+                            
                         <!-- <li class="list-inline-item"><span class="icon"><img src="{{ asset('assets/site') }}/images/phone-icon.svg" alt="title"></span> -->
                         </li>
                     </ul>
@@ -174,8 +205,71 @@
     <!-- endgulp -->
 
 
- 
+   <!-- offset area end -->
+    <!-- jquery latest version -->
+    <script src="{{asset('data-asset-table')}}/js/vendor/jquery-2.2.4.min.js"></script>
 
+
+    <script src="{{asset('data-asset-table')}}/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="{{asset('data-asset-table')}}/js/popper.min.js"></script>
+    <script src="{{asset('data-asset-table')}}/js/bootstrap.min.js"></script>
+    <script src="{{asset('data-asset-table')}}/js/owl.carousel.min.js"></script>
+    <script src="{{asset('data-asset-table')}}/js/metisMenu.min.js"></script>
+    <script src="{{asset('data-asset-table')}}/js/jquery.slimscroll.min.js"></script>
+    <script src="{{asset('data-asset-table')}}/js/jquery.slicknav.min.js"></script>
+
+    <!-- Start datatable js -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+    <!-- others plugins -->
+    <script src="{{asset('data-asset-table')}}/js/plugins.js"></script>
+    <script src="{{asset('data-asset-table')}}/js/scripts.js"></script>
+
+
+<script> 
+
+$('#dataTables').dataTable({
+        "responsive": true,
+        "dom": '<"html5buttons"B>lTfgitp',
+        "language": {
+            "emptyTable": "Gösterilecek ver yok.",
+            "processing": "Veriler yükleniyor",
+            "sDecimal": ".",
+            "sInfo": "_TOTAL_ kayıttan _START_ - _END_ arasındaki kayıtlar gösteriliyor",
+            "sInfoFiltered": "(_MAX_ kayıt içerisinden bulunan)",
+            "sInfoPostFix": "",
+            "sInfoThousands": ".",
+            "sLengthMenu": "Sayfada _MENU_ kayıt göster",
+            "sLoadingRecords": "Yükleniyor...",
+            "sSearch": "Ara:",
+            "sZeroRecords": "Eşleşen kayıt bulunamadı",
+            "oPaginate": {
+                "sFirst": "İlk",
+                "sLast": "Son",
+                "sNext": "Sonraki",
+                "sPrevious": "Önceki"
+            },
+            "oAria": {
+                "sSortAscending": ": artan sütun sıralamasını aktifleştir",
+                "sSortDescending": ": azalan sütun sıralamasını aktifleştir"
+            },
+            "select": {
+                "rows": {
+                    "_": "%d kayıt seçildi",
+                    "0": "",
+                    "1": "1 kayıt seçildi"
+                }
+            }
+        }
+    });
+</script>
+
+
+   
 </body>
 
 </html>

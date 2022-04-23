@@ -38,6 +38,7 @@ class PeopleAddController extends Controller
         
                 }
               
+
               
                     if(true) {
 
@@ -74,7 +75,8 @@ class PeopleAddController extends Controller
     {      
         
         $present = $request->get('part_id');
-             
+         
+        
            
      
                dd($present);

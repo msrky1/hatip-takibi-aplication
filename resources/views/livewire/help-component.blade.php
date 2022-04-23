@@ -27,12 +27,17 @@
               <li>
                  
                 Formu Dolduktan Sonra  <button class="btn btn-success" type="submit">Seçtiğin Cüzleri Al</button> <p> Butonuna Basarak Seçilen Cüzleri Alabilirsiniz </p>
-
+             
               </li>
               <li>
                 Bütün Hatim Almak İsterseniz Formu Doldurduktan Sonra Bütün Hatim Al Buttonunu Kullanarak Hatim Alabilirsiniz.
                </li>
-              <p style="color: red"> Not: Cüzü ve Hatmi Aldıktan Sonra İptal Edemezsiniz. </p>
+              <p style="color: red"> Not: Cüzü ve Hatmi Aldıktan Sonra İptal Edemezsiniz.  <br>
+             Not: 1 Defa da En Fazla 10 Cüz Alabilirsiniz. <br>
+                Ayrıca Cüz Tamamlandıktan Sonra Hatim Olarak Sayılacak ve Seçtiğiniz İle 1 Hatim  Eklenecektir.
+              
+      
+              </p>
             </ul>
           </div>
 

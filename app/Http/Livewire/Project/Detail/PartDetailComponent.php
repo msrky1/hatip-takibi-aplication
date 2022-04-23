@@ -8,6 +8,7 @@ use App\Models\Part;
 use App\Models\People;
 use App\Modes\Hatim;
 use App\Models\Person;
+use App\Models\Complated;
 use  Illuminate\Support\Facades\DB;
 
 
@@ -43,26 +44,20 @@ class PartDetailComponent extends Component
 
     }
 
-    public function deletePerson()
+    public function deletePerson($country_id)
 
     {
-       
-       
-        $delete = [];
-        dd($delete);
-    
-    
-        
-
+      
     }
  
     public function render()
     {
 
-        
+       //  DB::table('complated')->truncate();
         $country = Country::where('sira' , $this->sira)->first();
         $part = Part::with('getPerson')->get();
-     
+        $persons = Country::has('persons' , '>=' , 1)->get();
+
         $people = Person::all();
          
         $delete = [];
@@ -73,21 +68,56 @@ class PartDetailComponent extends Component
             foreach($part as $pa) {
 
                 if ($country->id == $p->country_id){
-
+              
                 if($p->part_id == $pa->id ) {
-
-
+                       
+                
+                $persons = Country::find($p->country_id)->get();
+             
             
+                 
+              
+                         array_push($delete, $pa->id);
 
-                      array_push($delete, $pa->id);
-                      
-                      
+              
+                            
+                   
+
+                 
+
+
+                
+                
+           
+     
+                   
+
+             //   var_dump(count($p->country_id));
+
                   
+                 
+                    
+                 //   var_dump(count($delete) );
 
+                    if(count($delete) == 30 ) {
+
+
+                        $hatim = new Complated();
+
+                        $hatim->name = 'full';
+                        $hatim->email = 'full@gmail.com';
+                        $hatim->country_id = $p->country_id;
+                        $hatim->save();
+
+                     }
             
-
+                   
+               
                       
                 }
+
+              
+                
 
                 }
               
@@ -95,7 +125,13 @@ class PartDetailComponent extends Component
  
           
         }
-          
+                    
+                  
+
+       
+ 
+      
+    
 
         
            
